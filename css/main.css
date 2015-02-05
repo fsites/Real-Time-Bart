@@ -1,3 +1,65 @@
+/*Colors*/
+
 body {
-	background-image: url("../images/mapblurred.png");
+	background: url("../images/mapblurred.png") no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/********HEADER********/
+
+#logo {
+	display: block;
+	height: 100px;
+	max-width: 300px;
+	margin: 15px auto 10px auto;
+}
+
+/******DROPDOWN******/
+.dropdown-container {
+	display: block;
+	height: 385px;
+	width: 90%;
+	margin: 20px auto 5px auto;
+}
+
+#dropdown-form {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.submit {
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	border-radius: 5px;
+	border: 3px solid #fff;
+	background-color: #353535;
+	font-size: 14px;
+	text-align: center;
+}
+
+.submit:hover {
+	cursor: pointer;
+	border: 3px solid #353535;
+	background-color: #fff;
+	color: #353535;
+}
+
+.submit:active {
+	outline: none;
+	border: none;
+}
+
+
+
+/******FOOTER******/
+.footer {
+	height: 20px;
+	position: relative;
+	text-align: center;
+	color: white;
 }
