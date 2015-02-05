@@ -1,4 +1,6 @@
-/*ENTER OPTION VALUES, STICKY FOOTER, CREATE DISPLAY TABLE FOR TRAINS*/
+/*ENTER OPTION VALUES, STICKY FOOTER, 
+CREATE DISPLAY TABLE FOR TRAINS
+STYLE DROPDOWN LIST*/
 
 
 body {
@@ -17,18 +19,14 @@ body {
 }
 
 /******DROPDOWN******/
-.dropdown-container {
+
+.dropdown-form {
 	display: block;
 	height: 385px;
 	width: 90%;
 	margin: 20px auto 5px auto;
-}
-
-#dropdown-form {
-	display: block;
-	width: 90%;
-	margin: 0 auto;
 	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 
