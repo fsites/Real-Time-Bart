@@ -18,21 +18,28 @@ body {
 	margin: 15px auto 10px auto;
 }
 
+/**MAIN CONTENT CONTAINER**/
+.content-container {
+	height: 385px;
+}
+
 /******DROPDOWN******/
 
 .dropdown-form {
 	display: block;
-	height: 385px;
+	height: 40px;
 	width: 90%;
-	margin: 20px auto 5px auto;
+	max-width: 400px;
+	margin: 15px auto 5px auto;
 	text-align: center;
 	font-family: 'Josefin Sans', sans-serif;
+	border-bottom: 2px solid white;
 }
 
 
 .submit {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	color: #fff;
 	border-radius: 5px;
 	border: 3px solid #fff;
@@ -51,6 +58,22 @@ body {
 .submit:active {
 	outline: none;
 	border: none;
+}
+
+/******RESULTS******/
+
+.display-table {
+	width: 100%;
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 400px;
+	text-align: center;
+}
+
+.display-table caption {
+	color: white;
+	font-size: 1.2em;
+	margin-top: 5px;
 }
 
 
