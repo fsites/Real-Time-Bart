@@ -1,0 +1,87 @@
+/*STICKY FOOTER, 
+CREATE DISPLAY TABLE FOR TRAINS
+*/
+
+
+body {
+	background: url("../images/mapblurred.png") no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/********HEADER********/
+
+#logo {
+	display: block;
+	height: 100px;
+	max-width: 300px;
+	margin: 15px auto 10px auto;
+}
+
+/**MAIN CONTENT CONTAINER**/
+.content-container {
+	height: 385px;
+}
+
+/******DROPDOWN******/
+
+.dropdown-form {
+	display: block;
+	height: 40px;
+	width: 90%;
+	max-width: 400px;
+	margin: 15px auto 5px auto;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	border-bottom: 2px solid white;
+}
+
+
+.submit {
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	border-radius: 5px;
+	border: 3px solid #fff;
+	background-color: gray;
+	font-size: 14px;
+	text-align: center;
+}
+
+.submit:hover {
+	cursor: pointer;
+	border: 3px solid gray;
+	background-color: #fff;
+	color: gray;
+}
+
+.submit:active {
+	outline: none;
+	border: none;
+}
+
+/******RESULTS******/
+
+.display-table {
+	width: 100%;
+	margin: 0 auto;
+	min-width: 300px;
+	max-width: 400px;
+	text-align: center;
+}
+
+.display-table caption {
+	color: white;
+	font-size: 1.2em;
+	margin-top: 5px;
+}
+
+
+
+/******FOOTER******/
+.footer {
+	height: 20px;
+	position: relative;
+	text-align: center;
+	color: white;
+}
