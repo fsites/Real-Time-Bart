@@ -4,7 +4,7 @@ $(document).ready(function() {
 	//hides display table on page load
 	$('.display-table').hide();
 	//gets value of dropdown on submit
-	$('.submit').submit(function(){
+	$('.submit').click(function(){
 		var times = $('#selection').val();
 		getResults(times);
 		console.log("times is " + times);
