@@ -12,6 +12,8 @@ $(document).ready(function() {
 
 //REQUESTS DEPARTURES
 var getResults = function(station) {
+
+	//XML Results
 	var result = $.ajax({
 		url: 'http://api.bart.gov/api/etd.aspx',
 		data: {
@@ -21,10 +23,18 @@ var getResults = function(station) {
 		},
 		dataType: 'xml',
 		type: 'GET'
-	});
+	})
+	.done(function(result){
+		$(result).find('etd').each(function(i, data){
+			var returnData = showResults(data);
+			$('.display-table').append(returnData)
+		})
+	})
 	console.log(result);
+
+
 };
 
-var showResults = function() {
+var showResults = function(data) {
 	$('.display-table').show();
 }
