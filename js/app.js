@@ -1,16 +1,31 @@
-//API KEY ZJVZ-JI6Y-IMGQ-DT35
+//GLOBAL VARIABLES
+var station = $('#selection').val();
 
 $(document).ready(function() {
 	//hides display table on page load
 	$('.display-table').hide();
 	//gets value of dropdown on submit
 	$('.submit').click(function(){
-		var times = $('#selection').val();
-		//getResults(times);
-		console.log("times is " + times);
+		getResults(station);
+		console.log("times is " + station);
+		return false;
 	});
 });
 
-var getResults = function(times) {
-
+//REQUESTS DEPARTURES
+var getResults = function(station) {
+	var result = $.ajax({
+		url: 'http://api.bart.gov/api/etd.aspx',
+		data: {
+			cmd: 'etd',
+			orig: station,
+			key: "ZJVZ-JI6Y-IMGQ-DT35"
+		},
+		dataType: 'xml'
+	});
+	console.log(result);
 };
+
+var showResults = function() {
+	$('.display-table').show();
+}
