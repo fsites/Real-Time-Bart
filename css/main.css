@@ -63,17 +63,23 @@ body {
 /******RESULTS******/
 
 .display-table {
+	color: white;
 	width: 100%;
 	margin: 0 auto;
 	min-width: 300px;
 	max-width: 400px;
-	text-align: center;
+	text-align: left;
 }
 
 .display-table caption {
-	color: white;
-	font-size: 1.2em;
-	margin-top: 5px;
+	width: 100%;
+	font-size: 1.7em;
+	margin: 10px auto 7px auto;
+}
+
+.display-table td {
+	font-size: 1.3em;
+	padding: .5em 0;
 }
 
 
