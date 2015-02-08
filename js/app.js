@@ -1,8 +1,9 @@
 $(document).ready(function() {
-	//hides display table on page load
+	//Hides display table on page load
 	$('.display-table').hide();
-	//gets value of dropdown on submit
+	//Gets value of dropdown on submit. Clears previous results
 	$('.submit').click(function(){
+		$('.display-table tr').remove();
 		var station = $('#selection').val();
 		console.log("depart station is " + station);
 		getResults(station);
@@ -24,22 +25,33 @@ var getResults = function(station) {
 		dataType: 'xml',
 		type: 'GET'
 	})
+	//PULLS DATA NEEDED FROM RESULTS
 	.done(function(xml){
 		$(xml).find('etd').each(function() {
-			var destination = $(this).find('destination').text();
-			var times = $(this).find('minutes').text();
-			console.log('departure times for ' + destination + times);
+			var destination = $(this).find('abbreviation').text();
+			var times = [];
+			//Pushes to empty array
+			$(this).find('minutes').each(function () {
+				var timeText = $(this).text()
+				if (timeText === "Leaving") {
+					times.push("<1 min");
+				} else {
+					times.push(timeText + "min")
+				}
+			});
+			//Joins and formats times
+			times = times.join(', ');
 			showResults(destination, times);
 		});
-
 	});
 };
 
+//APPENDS ITEMS TO TABLE
 var showResults = function(destination, times) {
 	$('.display-table').show();
-	$('.display-table').append('<tr><td>' 
+	$('.display-table').append('<tr><td id="departure-station">' 
 		+ destination 
-		+ '</td><td>' 
+		+ '</td><td id="departure-times">' 
 		+ times 
 		+ '</td></tr>');
 };
