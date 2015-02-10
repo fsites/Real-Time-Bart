@@ -5,7 +5,6 @@ $(document).ready(function() {
 	$('.submit').click(function(){
 		$('.display-table tr').remove();
 		var station = $('#selection').val();
-		console.log("depart station is " + station);
 		getResults(station);
 		return false;
 	});

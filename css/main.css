@@ -1,7 +1,12 @@
-body {
+* {
+	margin: 0;
+}
+
+html, body {
 	background: url("../images/mapblurred.png") no-repeat center center fixed;
 	background-size: cover;
 	font-family: 'Josefin Sans', sans-serif;
+	height: 100%;
 }
 
 /********HEADER********/
@@ -15,7 +20,14 @@ body {
 
 /**MAIN CONTENT CONTAINER**/
 .content-container {
-	height: 385px;
+	min-height: 100%;
+	margin-bottom: -20px;
+}
+
+.content-container:after {
+	content: "";
+	display: block;
+	height: 20px;
 }
 
 
@@ -91,7 +103,6 @@ body {
 /******FOOTER******/
 .footer {
 	height: 20px;
-	position: relative;
 	text-align: center;
 	color: white;
 }
