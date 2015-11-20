@@ -2,12 +2,14 @@ $(document).ready(function() {
 	//Hides display table on page load
 	$('.display-table').hide();
 	//Gets value of dropdown on submit. Clears previous results
-	$('.submit').click(function(){
+
+	$('#selection').on('change', function() {selectChange();});
+	var selectChange = function(){
 		$('.display-table tr').remove();
 		var station = $('#selection').val();
 		getResults(station);
 		return false;
-	});
+	};
 });
 
 //REQUESTS DEPARTURES
@@ -32,6 +34,7 @@ var getResults = function(station) {
 			//Pushes to empty array
 			$(this).find('minutes').each(function () {
 				var timeText = $(this).text()
+				
 				if (timeText === "Leaving") {
 					times.push("<1 min");
 				} else {
