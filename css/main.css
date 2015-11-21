@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	background: url("../images/mapblurred.png") no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Josefin Sans', sans-serif;
+	height: 100%;
+}
+
+/********HEADER********/
+#logo {
+	display: block;
+	height: 100px;
+	max-width: 300px;
+	margin: 10px auto 10px auto;
+}
+
+
+/**MAIN CONTENT CONTAINER**/
+.content-container {
+	min-height: 100%;
+	margin-bottom: -20px;
+}
+
+.content-container:after {
+	content: "";
+	display: block;
+	height: 20px;
+}
+
+
+/******DROPDOWN******/
+#dropdown-form {
+	display: block;
+	height: 30px;
+	width: 90%;
+	max-width: 400px;
+	margin: 20px auto 10px auto;
+	text-align: center;
+	padding-bottom: -20px;
+	border-bottom: 2px solid white;
+}
+
+#dropdown-form select{
+	border: 0px;
+	outline: 0px;
+}
+
+/******RESULTS******/
+.display-table {
+	color: white;
+	min-width: 280px;
+	max-width: 400px;
+	margin: 0 auto;
+	padding-top: -20px;
+	text-align: left;
+}
+
+.display-table caption {
+	width: 100%;
+	font-size: 1.5em;
+	margin: 10px auto 7px auto;
+}
+
+.display-table td {
+	padding: .5em 0;
+	font-size: 1.3em;
+}
+
+#departure-station {
+	float: left;
+}
+
+#departure-times {
+	float: right;
+}
+
+
+/******FOOTER******/
+.footer {
+	height: 20px;
+	text-align: center;
+	color: white;
+}
