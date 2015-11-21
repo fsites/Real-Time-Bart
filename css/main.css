@@ -32,9 +32,9 @@ html, body {
 
 
 /******DROPDOWN******/
-.dropdown-form {
+#dropdown-form {
 	display: block;
-	height: 40px;
+	height: 30px;
 	width: 90%;
 	max-width: 400px;
 	margin: 20px auto 10px auto;
@@ -43,6 +43,10 @@ html, body {
 	border-bottom: 2px solid white;
 }
 
+#dropdown-form select{
+	border: 0px;
+	outline: 0px;
+}
 
 /******RESULTS******/
 .display-table {
@@ -80,6 +84,3 @@ html, body {
 	text-align: center;
 	color: white;
 }
-
-
-
