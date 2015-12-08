@@ -77,6 +77,23 @@ html, body {
 	float: right;
 }
 
+/**REFRESH BUTTON**/
+#button-container {
+	width: 60px;
+	margin: 0 auto;
+}
+
+#refresh {
+	height: 60px;
+	width: 60px;
+	padding: 0 0 5px 0;
+}
+
+#refresh:active, #refresh:focus {
+	outline: none;
+	border: none;
+}
+
 
 /******FOOTER******/
 .footer {
@@ -84,5 +101,3 @@ html, body {
 	text-align: center;
 	color: white;
 }
-
-

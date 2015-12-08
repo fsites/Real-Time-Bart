@@ -1,11 +1,15 @@
 $(document).ready(function() {
-	//Hides display table on page load
+	//Hides display table and refresh on page load
 	$('.display-table').hide();
+	$('#refresh').hide();
 	//Gets value of dropdown on submit. Clears previous results
 
 	$('#selection').on('change', function() {selectChange();});
+	$('#refresh').on('click', function() {selectChange();});
+
 	var selectChange = function(){
-		$('.display-table tr').remove();
+		$('.display-table tr').hide();
+		$('#refresh').hide();
 		var station = $('#selection').val();
 		getResults(station);
 		return false;
@@ -50,14 +54,11 @@ var getResults = function(station) {
 
 //APPENDS ITEMS TO TABLE
 var showResults = function(destination, times) {
-	$('.display-table').show();
 	$('.display-table').append('<tr><td id="departure-station">' 
 		+ destination 
 		+ '</td><td id="departure-times">' 
 		+ times 
 		+ '</td></tr>');
-<<<<<<< HEAD
+	$('.display-table').fadeIn(100);
+	$('#refresh').fadeIn(100);
 };
-=======
-};
->>>>>>> origin/gh-pages
