@@ -56,4 +56,8 @@ var showResults = function(destination, times) {
 		+ '</td><td id="departure-times">' 
 		+ times 
 		+ '</td></tr>');
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/gh-pages
