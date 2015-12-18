@@ -3,10 +3,10 @@
 }
 
 html, body {
-	background: url("../images/mapblurred.png") no-repeat center center fixed;
-	background-size: cover;
 	font-family: 'Josefin Sans', sans-serif;
-	height: 100%;
+	background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7) ), url("../images/bart-map.png") repeat;
+	background-size: cover;
+	color: #fff;
 }
 
 /********HEADER********/
@@ -22,6 +22,7 @@ html, body {
 .content-container {
 	min-height: 100%;
 	margin-bottom: -20px;
+	z-index: 9999;
 }
 
 .content-container:after {
@@ -51,11 +52,12 @@ html, body {
 /******RESULTS******/
 .display-table {
 	color: white;
-	min-width: 280px;
+	width: 90%;
 	max-width: 400px;
 	margin: 0 auto;
 	padding-top: -20px;
 	text-align: left;
+	border-bottom: 2px solid #fff;
 }
 
 .display-table caption {
@@ -79,30 +81,23 @@ html, body {
 
 /**REFRESH BUTTON**/
 #button-container {
-	width: 60px;
+	font-size: .9em;
+	font-weight: lighter;
 	margin: 0 auto;
+	text-align: center;
 }
 
-#refresh {
-	height: 60px;
-	width: 60px;
-	padding: 0 0 5px 0;
+.button {
+	width: 100px;
+	margin: 20px auto;
 }
 
-#refresh:active, #refresh:focus {
+.button:hover {
+	cursor: pointer;
+	border-bottom: 2px solid #fff;
+}
+
+.button:active, .button:focus {
 	outline: none;
 	border: none;
-}
-
-/*MAP*/
-#map-container {
-	height: 500px;
-	width: 500px;
-	margin: 0 auto;
-}
-
-#map {
-	height: 320px;
-	width: 320px;
-	margin: 0 90px;
 }

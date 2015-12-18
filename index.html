@@ -10,12 +10,12 @@
 	<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-	<header class="header">
+	<header class="header hide">
 		<img src="images/logo.png" alt="logo" id="logo">
 	</header>
 
 <!-- MAIN CONTENT -->
-	<div class="content-container">
+	<div class="content-container hide">
 		<!-- INPUT FORM -->
 		<form id="dropdown-form">
 			<select id="selection">
@@ -74,12 +74,10 @@
 
 		<!-- REFRESH BUTTON -->
 		<div id="button-container">
-			<input type="image" id="refresh" src="images/refresh.png">
+			<h2 class="button" id="show-map">Show Map</h2>
+			<h2 class="button" id="refresh">Refresh</h2>
 		</div>
 	</div>
 
-	<div id="map-container">
-		<img id="map" src="images/map.gif" alt="bart-map">
-	</div>
 </body>
 </html>

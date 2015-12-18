@@ -2,6 +2,7 @@ $(document).ready(function() {
 	//Hides display table and refresh on page load
 	$('.display-table').hide();
 	$('#refresh').hide();
+
 	//Gets value of dropdown on submit. Clears previous results
 
 	$('#selection').on('change', function() {selectChange();});
