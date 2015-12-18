@@ -4,10 +4,11 @@ $(document).ready(function() {
 	$('#refresh').hide();
 
 	//Gets value of dropdown on submit. Clears previous results
-
 	$('#selection').on('change', function() {selectChange();});
 	$('#refresh').on('click', function() {selectChange();});
-
+	$('#toggle-map').on('click', function() {
+		$('.content-container').hide();
+	})
 	var selectChange = function(){
 		$('.display-table tr').hide();
 		$('#refresh').hide();
